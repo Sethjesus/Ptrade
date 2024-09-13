@@ -17,16 +17,16 @@
             text-align: center;
             color: white;
             padding: 20px;
-            background-color: #002244; /* 確保整個區域的背景顏色一致 */
-            overflow: hidden; /* 防止背景顏色外露 */
+            background-color: #002244;
+            overflow: hidden;
         }
         header img {
-            width: 50%; /* 調整寬度使圖片不那麼扁平 */
+            width: 50%;
             height: auto;
-            max-height: 280px; /* 調整最大高度 */
+            max-height: 280px;
             opacity: 0.5;
             display: block;
-            margin: 0 auto; /* 使圖片置中 */
+            margin: 0 auto;
         }
         header h1 {
             position: absolute;
@@ -35,7 +35,7 @@
             transform: translate(-50%, -50%);
             font-size: 3em;
             color: #ffffff;
-            white-space: nowrap; /* 防止標題換行 */
+            white-space: nowrap;
         }
         .slideshow-container {
             max-width: 1200px;
@@ -104,7 +104,6 @@
             text-decoration: underline;
         }
         
-   
         .back-button {
             position: absolute;
             top: 2px;
@@ -120,27 +119,51 @@
             transition: background-color 0.3s ease;
         }
         .back-button:hover {
-            background-color: #218838; /* 更深的綠色 */
+            background-color: #218838;
         }
         .ipc-button {
-    position: absolute;
-    top: 2px;
-    right: 150px; /* 調整這個值以確保按鈕位於頁腳的右邊 */
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
+            position: absolute;
+            top: 2px;
+            right: 150px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .ipc-button:hover {
+            background-color: #0056b3;
+        }
 
-.ipc-button:hover {
-    background-color: #0056b3; /* 更深的藍色 */
-}
-
+        /* 手機樣式 */
+        @media (max-width: 768px) {
+            header img {
+                width: 80%;
+                max-height: 180px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .prev, .next {
+                font-size: 14px;
+                padding: 10px;
+            }
+            footer {
+                font-size: 12px;
+            }
+            .back-button, .ipc-button {
+                font-size: 12px;
+                padding: 8px 16px;
+                top: 5px;
+            }
+            .ipc-button {
+                right: 80px; /* 調整IPC按鈕的位置 */
+            }
+        }
     </style>
 </head>
 <body>
@@ -167,7 +190,6 @@
             <img src="https://github.com/Sethjesus/Photo/blob/main/Ptrade4.jpg?raw=true" alt="圖片 4">
         </div>
 
-        <!-- 前後導航按鈕 -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
@@ -177,7 +199,6 @@
         <a href="https://your-ipc-link-here" class="ipc-button">進入 IPC 選項</a>
         © 2024 由景沛低碳管理方案團隊製作
     </footer>
-    
 
     <script>
         let slideIndex = 1;
